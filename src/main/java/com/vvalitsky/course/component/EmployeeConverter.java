@@ -4,14 +4,15 @@ import com.vvalitsky.course.entities.db.Employee;
 import com.vvalitsky.course.entities.dto.EmployeeDto;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by Vladislav Valitsky at 09.08.2020
  */
 
-@RequiredArgsConstructor
 @Component
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class EmployeeConverter {
 
     private final ModelMapper objectMapper;
